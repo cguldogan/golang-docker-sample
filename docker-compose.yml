@@ -1,0 +1,9 @@
+version: '2'
+services:
+  golang-app-service:
+    container_name: golang-app
+    build: .
+    command: go run main.go
+    volumes:
+      - ./src:/go/src/app
+    working_dir: /go/src/app
